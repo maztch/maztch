@@ -114,3 +114,10 @@
     margin-bottom: 5px;
   }
 }
+
+.pi{
+  margin: 12px; 
+  padding: 12px; 
+  border:1ps solid white;
+  color: white;
+}
