@@ -16,7 +16,73 @@
         <p>
           This is just a welcome page but more things are comming.
         </p>
+        <div style="margin: 12px; padding: 12px; border:1ps solid white;">Pi status: <span id="status"></span></div>
       </div>
     </div>
-  </body>
+
+<script>
+
+var url = 'https://pi.maztch.com';
+function setStatus(status){
+ var statusElement = document.getElementById('status');
+  statusElement.innerHTML = status;
+  if (status == 'online'){
+    statusElement.style.color = 'green';
+  }
+  else {
+    statusElement.style.color = 'red';
+    statusElement.style.cursor = 'pointer';
+    statusElement.addEventListener('click', ()=>{
+      window.location = url;
+    });
+  }
+}
+function ping(url) {
+    const xhr = new XMLHttpRequest();  
+    xhr.open("GET", url);  
+    xhr.onreadystatechange = () => {
+       if (xhr.readyState == 4 && xhr.status == 200){
+        setStatus('online');
+       }
+       else {
+        setStatus('offline');
+       }
+    }
+    xhr.send();
+  }
+
+function ping2() {
+    var url = 'https://pi.maztch.com';
+    const xhr = new XMLHttpRequest();
+    console.log("UNSENT: ", xhr.status);
+  
+    xhr.open("GET", url);
+    console.log("OPENED: ", xhr.status);
+  
+    xhr.onprogress = () => {
+      console.log("LOADING: ", xhr.status);
+    };
+  
+    xhr.onload = () => {
+      console.log("DONE: ", xhr.status);
+    };
+  
+    xhr.onreadystatechange = () => {
+       if (xhr.readyState == 4 && xhr.status == 200){
+        console.log("DONE: ok");
+       }
+       else if (xhr.readyState == 4 && xhr.status >= 500){
+        console.log("DONE: error ", xhr.status);
+       }
+       else {
+        console.log('CHANGE:', xhr.readyState, xhr.status);
+       }
+    }
+    xhr.send();
+  }
+  
+  ping(url);
+  </script>
+
+</body>
 </html>
