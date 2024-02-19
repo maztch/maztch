@@ -11,7 +11,7 @@
     <div class="container">
       <div class="header">
         <img src="assets/maztch.svg" title="maztch" width="100" height="100" />
-        <h3>My site project</h3>
+        <h3>My side project</h3>
         <h1>Welcome</h1>
         <p>
           This is just a welcome page but more things are comming.
@@ -25,16 +25,19 @@
 var url = 'https://pi.maztch.com';
 function setStatus(status){
  var statusElement = document.getElementById('status');
+  var onClickAction = function(){
+    window.location = url;
+  }
   statusElement.innerHTML = status;
   if (status == 'online'){
     statusElement.style.color = 'green';
+    statusElement.style.cursor = 'pointer';
+    statusElement.addEventListener('click', onClickAction);
   }
   else {
     statusElement.style.color = 'red';
-    statusElement.style.cursor = 'pointer';
-    statusElement.addEventListener('click', ()=>{
-      window.location = url;
-    });
+    statusElement.style.cursor = 'none';
+    statusElement.removeEventListener('click', onClickAction);
   }
 }
 function ping(url) {
