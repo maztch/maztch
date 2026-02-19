@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy</title>
+  <meta name="description" content="Privacy Policy" />
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.55; margin: 0; background: #fff; color: #111; }
+    main { max-width: 900px; margin: 0 auto; padding: 32px 16px 64px; }
+    h1 { font-size: 2rem; margin: 0 0 8px; }
+    .meta { color: #555; margin: 0 0 24px; }
+    h2 { margin-top: 28px; font-size: 1.25rem; }
+    ul { padding-left: 20px; }
+    a { color: inherit; }
+    .card { background: #f7f7f7; border: 1px solid #eee; border-radius: 12px; padding: 16px; }
+    footer { margin-top: 40px; color: #666; font-size: 0.95rem; }
+    code { background: #f2f2f2; padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: <span id="last-updated">2026-02-19</span></p>
+
+    <div class="card">
+      <p>
+        This Privacy Policy explains how we collect, use, and protect your information when you use our application
+        (the “Service”). By using the Service, you agree to the practices described in this policy.
+      </p>
+    </div>
+
+    <h2>1. Who we are</h2>
+    <p>
+      This Service is provided by <strong>[Your Company/Name]</strong> (“we”, “us”, “our”).
+      If you have any questions, contact us at <a href="mailto:[your-email@example.com]">[your-email@example.com]</a>.
+    </p>
+
+    <h2>2. Information we collect</h2>
+    <p>
+      We only collect the minimum information necessary to provide the Service.
+    </p>
+    <ul>
+      <li>
+        <strong>Authentication data (Firebase Authentication):</strong>
+        When you log in, Firebase may process identifiers such as your email address (if you use email login),
+        a user ID, and basic authentication tokens needed to keep you signed in.
+      </li>
+      <li>
+        <strong>Service data:</strong>
+        We do not collect or use personal data beyond what is required to operate the Service and provide its features.
+      </li>
+      <li>
+        <strong>Optional diagnostic data:</strong>
+        If enabled, the app/platform may collect limited technical information (e.g., device type, app version, crash logs)
+        to help us maintain reliability. If you do not use any analytics or crash reporting, remove this section.
+      </li>
+    </ul>
+
+    <h2>3. How we use information</h2>
+    <p>We use the collected information only to:</p>
+    <ul>
+      <li>Authenticate you and maintain your session</li>
+      <li>Provide and operate the Service</li>
+      <li>Prevent abuse, fraud, and security issues</li>
+      <li>Maintain and improve performance and reliability</li>
+    </ul>
+
+    <h2>4. Legal bases (where applicable)</h2>
+    <p>
+      Depending on your location, we process data under one or more of the following legal bases:
+      providing the Service (contract), legitimate interests (security and reliability), and compliance with legal obligations.
+    </p>
+
+    <h2>5. Sharing of information</h2>
+    <p>
+      We do not sell your personal information.
+      We only share information with:
+    </p>
+    <ul>
+      <li>
+        <strong>Firebase (Google):</strong> We use Firebase Authentication to provide login functionality.
+        Firebase processes authentication data as a service provider/processor to enable sign-in and account security.
+      </li>
+      <li>
+        <strong>Legal requirements:</strong> If required by law or to protect rights, safety, and security.
+      </li>
+    </ul>
+
+    <h2>6. Data retention</h2>
+    <p>
+      We retain authentication-related data for as long as your account is active or as needed to provide the Service.
+      You may request deletion of your account and associated authentication records, subject to legal requirements.
+    </p>
+
+    <h2>7. Security</h2>
+    <p>
+      We take reasonable measures to protect information, including using industry-standard security practices.
+      However, no method of transmission or storage is 100% secure.
+    </p>
+
+    <h2>8. Your rights</h2>
+    <p>
+      Depending on your location, you may have rights to access, correct, delete, or restrict the processing of your personal information.
+      To exercise these rights, contact us at <a href="mailto:[your-email@example.com]">[your-email@example.com]</a>.
+    </p>
+
+    <h2>9. Children’s privacy</h2>
+    <p>
+      The Service is not intended for children under 13 (or the minimum age required in your jurisdiction).
+      We do not knowingly collect personal information from children.
+    </p>
+
+    <h2>10. International transfers</h2>
+    <p>
+      Firebase may process and store data on servers located in different countries. Where required, appropriate safeguards are used.
+    </p>
+
+    <h2>11. Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. We will revise the “Last updated” date at the top of this page.
+      Continued use of the Service after changes means you accept the updated policy.
+    </p>
+
+    <h2>12. Contact</h2>
+    <p>
+      If you have questions or requests about this Privacy Policy, contact:
+      <br />
+      <strong>[Your Company/Name]</strong>
+      <br />
+      Email: <a href="mailto:[your-email@example.com]">[your-email@example.com]</a>
+    </p>
+
+    <footer>
+      <p>
+        Note: Replace placeholders like <code>[Your Company/Name]</code> and <code>[your-email@example.com]</code>.
+        If you do not use analytics/crash reporting, remove the “Optional diagnostic data” section.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    // Optional: auto-set "Last updated" to today's date.
+    // Comment out if you prefer to set it manually.
+    (function () {
+      const el = document.getElementById("last-updated");
+      if (!el) return;
+      const d = new Date();
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, "0");
+      const dd = String(d.getDate()).padStart(2, "0");
+      el.textContent = `${yyyy}-${mm}-${dd}`;
+    })();
+  </script>
+</body>
+</html>
